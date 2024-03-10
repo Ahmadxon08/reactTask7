@@ -1,0 +1,106 @@
+.todo {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    360deg,
+    #ff6e7f,
+    #5aba15,
+    #156b99,
+    #dac11b,
+    #7c144f,
+    #ffd3bf
+  );
+  background-size: 200% 200%;
+  animation: animateGradient 3s ease infinite;
+  padding-bottom: 30px;
+  .todo_head {
+    display: flex;
+ 
+    align-items: center;
+    margin: 40px 0;
+    padding: 20px 30px;
+    background: #cccccc2c;
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0px 0px 6px 3px #ccc;
+    h1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #156b99;
+      margin: 0 auto;
+      font-size: 26px !important;
+    }
+    button {
+      padding: 6px;
+      border: 0;
+      color: #156b99;
+      border-radius: 6px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: all 0.3s;
+      background-color: #ffffff72;
+    }
+    button:hover {
+      color: #ffffff;
+      background-color: #156b99;
+    }
+  }
+  .todo_content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 28x !important;
+    .todo_card {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+
+      .todo_card_item {
+        display: flex;
+        align-items: center;
+        transition: all 0.3s;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px;
+        border-radius: 10px;
+        background: #ffffff72;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+        .name {
+          display: flex;
+          flex-direction: column;
+          span {
+            font-size: 20px;
+            font-weight: 600;
+            color: #747779;
+          }
+          h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #39627d;
+          }
+        }
+        .p {
+          width: 30px;
+          height: 30px;
+        }
+      }
+      .todo_card_item:hover {
+        box-shadow: 0 0 5px 6px #ccc;
+      }
+    }
+  }
+}
+@keyframes animateGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

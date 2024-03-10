@@ -1,0 +1,59 @@
+.photo {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    360deg,
+    #ff6e7f,
+    #5aba15,
+    #156b99,
+    #dac11b,
+    #7c144f,
+    #ffd3bf
+  );
+  background-size: 200% 200%;
+  animation: animateGradient 3s ease infinite;
+  padding-bottom: 30px;
+  .photo_head {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    background-color: #5b54546f;
+    padding: 30px;
+    border-radius: 12px;
+
+    button {
+      padding: 8px 10px;
+      border: 0;
+      background-color: #fff;
+      border-radius: 6px;
+      color: #156b99;
+      font-size: 18px;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #156b99;
+      color: #fff;
+    }
+    h1 {
+      font-size: 58px;
+      color: #156b99;
+      margin: 0 auto;
+    }
+  }
+  .photo_card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .card_head{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
