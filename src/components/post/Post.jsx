@@ -21,7 +21,7 @@ const Post = () => {
     };
 
     fetchPosts();
-  }, []);
+  }, [id]);
 
   return (
     <div className="post">
@@ -34,12 +34,12 @@ const Post = () => {
         </div>
         <ul>
           {posts.map((post) => {
-            if (post.id === parseInt(id)) {
+            if (post?.userId == id) {
               return (
                 <div className="post_card" key={post.id}>
                   <h1>{post.title}</h1>
                   <p>{post.body}</p>
-                  <a href="">Comment</a>
+                 <Link to={`/comment/${post.id}`}> <a href="">Comment</a></Link>
                 </div>
               );
             } else {

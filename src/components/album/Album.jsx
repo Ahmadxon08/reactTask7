@@ -38,7 +38,7 @@ const Album = () => {
                   <div className="name">
                     <p>{album.id}th user</p>
                     <h3>{album.title}</h3>
-                    <Link to={`/photos/${album.id}`}>
+                    <Link to={`/photo/${album.id}`}>
                       <span>photo</span>
                     </Link>
                   </div>

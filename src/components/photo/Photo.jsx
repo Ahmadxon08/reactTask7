@@ -32,13 +32,15 @@ const Photo = () => {
 
         <div className="photo_card">
           {photos.map((photo) => {
-            if (parseInt(photo.userId) === parseInt(id)) {
+            if (photo.albumId == id) {
               return (
                 <div className="card" key={photo.id}>
                   <div className="card_head">
                     <img src={photo.thumbnailUrl} alt={photo.title} />
-                    <span>{photo.id}th user's photo</span>
-                    <h1>{photo.title}</h1>
+                    <div className="text">
+                      <span>{photo.id}th user's photo</span>
+                      <h1>{photo.title}</h1>
+                    </div>
                   </div>
                 </div>
               );
