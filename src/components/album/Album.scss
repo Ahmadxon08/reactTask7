@@ -2,16 +2,21 @@
   display: flex;
   flex-direction: column;
   background: linear-gradient(
-    360deg,
-    #ff6e7f,
-    #5aba15,
-    #156b99,
-    #dac11b,
-    #7c144f,
-    #ffd3bf
+    315deg,
+    rgb(0, 76, 101) 3%,
+    rgba(101, 0, 61, 0.639) 14%,
+    rgb(206, 194, 60) 38%,
+    rgb(206, 70, 60) 48%,
+    rgb(143, 48, 238) 68%,
+    rgb(9, 98, 123) 98%
   );
-  background-size: 200% 200%;
-  animation: animateGradient 3s ease infinite;
+  animation: gradient 15s ease infinite;
+  background-repeat: no-repeat;
+  background-size: 500%, 500%;
+  background-clip: padding-box;
+  background-attachment: fixed;
+  animation-duration: 35s;
+  animation-iteration-count: infinite;
   padding-bottom: 30px;
   .album_head {
     display: flex;
@@ -85,5 +90,17 @@
         }
       }
     }
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
   }
 }
